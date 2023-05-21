@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H3 th:text="${quiz.question}"></H3>
+<H1 th:if="${isCorrect}">Your answer is correct</H1>
+<H1 th:unless="${isCorrect}">Your answer is incorrect</H1>
+</body>
+</html>

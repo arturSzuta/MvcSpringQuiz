@@ -3,6 +3,7 @@ package pl.sda.pol137.mvcspringquiz.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -30,19 +31,5 @@ public class ExerciseController {
     ){
         return age == null ? "Greetings " + name + "!" : "Greetings " + name + "! Your age is " + age + ". Hello from Spring";
     }
-    @GetMapping("/calculate")
-    @ResponseBody
-    public String calculate(
-            @RequestParam double a,
-            @RequestParam double b,
-            @RequestParam(defaultValue = "add") String op
-    ){
-        return switch (op) {
-            case "add" -> String.format("%f + %f = %f", a, b, a + b);
-            case "sub" -> String.format("%f - %f = %f", a, b, a - b);
-            case "mul" -> String.format("%f * %f = %f", a, b, a * b);
-            case "div" -> String.format("%f / %f = %f", a, b, a / b);
-            default -> "Error";
-        };
-    }
+
 }
