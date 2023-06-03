@@ -22,9 +22,9 @@ public class QuizAdminController {
         return "/quiz/create";
     }
     @PostMapping("/create")
-    public String createQuiz(@Valid QuizViewModel quiz) {
-        System.out.println(quiz.getOptions());
-        System.out.println(quiz.getCorrectOption());
+    public String createQuiz(@Valid QuizViewModel quizViewModel) {
+
+       // quizService.saveQuiz();
         return "/quiz/index";
     }
 }
