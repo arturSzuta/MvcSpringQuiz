@@ -1,9 +1,10 @@
 package pl.sda.pol137.mvcspringquiz.repository;
 
+import org.springframework.stereotype.Component;
 import pl.sda.pol137.mvcspringquiz.model.Quiz;
 
 import java.util.*;
-
+@Component
 public class QuizRepositoryInMemory {
     public QuizRepositoryInMemory() {
         this.map = new HashMap<>();
