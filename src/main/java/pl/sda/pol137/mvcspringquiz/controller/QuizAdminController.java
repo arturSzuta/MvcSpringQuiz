@@ -10,6 +10,7 @@ import pl.sda.pol137.mvcspringquiz.model.QuizViewModel;
 @Controller
 @RequestMapping("/admin/quiz")
 public class QuizAdminController {
+
     @GetMapping("/create")
     public String createForm() {
         return "/quiz/create";
